@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
+
 public class Main {
-  public static void main(String[] args) {
-    ArrayList<Integer> list = new ArrayList<Integer>();
-    list.add(4);
-    list.add(2);
-    list.add(3);
-    list.add(5);
-    list.add(1);
-    List<Integer> sorted = treeSort(list); 
-    System.out.println("Sorted list: " + sorted);
-  }
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(4);
+        list.add(2);
+        list.add(3);
+        list.add(5);
+        list.add(1);
+        List<Integer> sorted = TreeSort.treeSort(list);
+        System.out.println("Sorted list: " + sorted);
+    }
 }
