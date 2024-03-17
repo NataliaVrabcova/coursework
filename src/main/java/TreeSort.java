@@ -1,38 +1,13 @@
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.List;
 
-public class Node {
-    int data;
-    Node child_left;
-    Node child_right;
-    Node(int data){
-      this.data = data;
-      this.child_left = null;
-      this.child_right = null;
-    }
-   void add_item(int item){
-     if (item < data) {
-         if (child_left == null) {
-             child_left = new Node(item);
-         } else {
-             child_left.add(item);
-         }
-     } else {
-         if (child_right == null) {
-             child_right = new Node(item);
-         } else {
-             child_right.add(item);
-         }
-     }
-     
-   }
-    
+public class TreeSort{
+  public static List<Integer> treeSort(List<Integer> list) {
+      Node root = new Node(list.get(0));
+      for (int i = 1; i < list.size(); i++) {
+          root.add(list.get(i));
+      }
+      return root.walk();
   }
 }
-
-
-  public static void buildTree(String[] list) {
-    for (int i = 0; i < list.length; i++) {
-      walk_tree(list, i);
-    }
-  }
