@@ -1,0 +1,18 @@
+@Test
+public void () {
+  int[] inputArray = {4, 2, 3, 5, 1};
+  java.util.List<Integer> inputList = new java.util.ArrayList<>();
+  for (int num : inputArray) {
+      inputList.add(num);
+  }
+
+  java.util.List<Integer> expected = new java.util.ArrayList<>();
+  expected.add(1);
+  expected.add(2);
+  expected.add(3);
+  expected.add(4);
+  expected.add(5);
+
+  // Use fully qualified name for assertEquals
+  org.junit.Assert.assertEquals(expected, TreeSort.treeSort(inputList));
+}
